@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Cassie & Gideon 2024</title>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Cassie & Gideon tie the knot</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid text-center mt-3 py-3">
+            <a class="link-no-decor social-media-links" href="https://www.hitched.co.uk/web/cassie-still-and-gideon-berends-sheriff" target="_blank" rel="noopener" aria-label="visit our wedding website (opens in new tab)"><i class="fa-light fa-rings-wedding"></i></a>
+            <a class="link-no-decor social-media-links" href="https://www.hitched.co.uk/web/cassie-still-and-gideon-berends-sheriff">Visit our Wedding Website!</a>
+            <a class="link-no-decor social-media-links" href="https://www.hitched.co.uk/web/cassie-still-and-gideon-berends-sheriff" target="_blank" rel="noopener" aria-label="visit our wedding website (opens in new tab)"><i class="fa-light fa-rings-wedding"></i></a>
+        </div>
+        <div class="container-fluid text-center">
+            <p class="mb-0 pb-3">Copyright <i class="fa-regular fa-copyright"></i> KSL Designs</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b59d6ce89e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
